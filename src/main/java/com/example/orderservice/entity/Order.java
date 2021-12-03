@@ -1,21 +1,20 @@
 package com.example.orderservice.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "orders")
+@Getter
+@Setter
+@Table(name = "tbl_order")
 public class Order {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long OrderId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long OrderId;
     private String name;
     private String price;
-    private String customerId;
+    private Long customerId;
 }
