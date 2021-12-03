@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/order-cus")
+@RequestMapping("/orders/order-cus")
 public class OrderCusomerController {
 
     @Autowired
